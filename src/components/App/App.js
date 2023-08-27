@@ -11,6 +11,9 @@ function App() {
           <li>Github</li>
         </ul>
       </div>
+      <div className='body'>
+
+      </div>
     </div>
   );
 }
