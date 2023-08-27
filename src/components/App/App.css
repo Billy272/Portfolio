@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   background-color: rgb(17, 180, 180);
+  align-items: left;
 }
 
 h1 {
