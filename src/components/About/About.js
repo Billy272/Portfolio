@@ -1,8 +1,7 @@
 import React, {Component} from "react";
 import './About.css'
 
-export default class About extends Component {
-    render() {
+function About() {
         return(
            <div>
               <div className='cont'>
@@ -10,5 +9,6 @@ export default class About extends Component {
               </div> 
            </div>
         );
-    }
 }
+
+export default About;
