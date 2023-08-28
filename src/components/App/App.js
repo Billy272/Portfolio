@@ -1,4 +1,5 @@
 import './App.css';
+import About from '../About/About'
 
 function App() {
   return (
@@ -7,7 +8,7 @@ function App() {
         <h1>Bill's Portfolio.</h1>
         <ul>
           <li>Home</li>
-          <li>About</li>
+          <li><About title="About"/></li>
           <li>Github</li>
         </ul>
       </div>
