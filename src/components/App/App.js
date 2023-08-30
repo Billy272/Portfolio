@@ -8,7 +8,7 @@ import Contact from '../Contact/Contact';
 function App() {
   return (
     <div className='App'>
-      <Header />
+      <Header name="Bill Bitok" proffesion="Front-End Developer and Data Scientist." />
       <About />
       <Projects />
       <Contact />
