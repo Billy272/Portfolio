@@ -32,7 +32,7 @@ function Header(props) {
     const classes = useStyles()
     return (
         <header className={classes.header}>
-            <div className="header-content">
+            <div className={classes.headerContent}>
                 <img src={require('./img.webp').default} alt="Profile" className={classes.profileImage} />
                 <div className={classes.textContent}>
                     <h1 className={classes.heading}>{props.name}</h1>
