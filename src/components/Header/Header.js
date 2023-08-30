@@ -1,11 +1,16 @@
 import React from "react";
 import './Header.css'
 
-function Header() {
+function Header(props) {
     return (
-        <header>
-            <h1>Bill Bitok</h1>
-            <p>Full-Stack Developer</p>
+        <header className="header">
+            <div className="header-content">
+                <img src={require('./img.webp').default} alt="Profile" className="profile-image" />
+                <div className="text-content">
+                    <h1>{props.name}</h1>
+                    <p>{props.proffesion}</p>
+                </div>
+            </div>
         </header>
     );
 }
