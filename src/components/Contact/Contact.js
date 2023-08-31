@@ -14,9 +14,12 @@ function Contact() {
     };
 
     return (
-        <div className="contact">
-            <h2></h2>
-        </div>
+        <section className="contact">
+            <h2>Contact Me</h2>
+            <div className='contact-form'>
+                <form onSubmit={handleSubmit}></form>
+            </div>
+        </section>
     );
 }
 
