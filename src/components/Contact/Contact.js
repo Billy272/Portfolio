@@ -17,7 +17,29 @@ function Contact() {
         <section className="contact">
             <h2>Contact Me</h2>
             <div className='contact-form'>
-                <form onSubmit={handleSubmit}></form>
+                <form onSubmit={handleSubmit}>
+                    <input 
+                    type='text'
+                    placeholder='Name'
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    />
+                    <input 
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    />
+                    <textarea 
+                    placeholder="Message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                    />
+                    <button type='submit'>Submit</button>
+                </form>
             </div>
         </section>
     );
