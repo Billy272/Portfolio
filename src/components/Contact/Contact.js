@@ -38,7 +38,10 @@ function Contact() {
                     onChange={(e) => setMessage(e.target.value)}
                     required
                     />
-                    <button type='submit'>Submit</button>
+                    <button type='submit' className="animated-button">
+                        <span>Submit</span>
+                        <span></span>
+                    </button>
                 </form>
             </div>
         </section>
