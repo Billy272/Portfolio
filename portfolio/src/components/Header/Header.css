@@ -2,7 +2,9 @@
     background-color: #222;
     color: white;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .profile-image {
     width: 100px;
@@ -13,6 +15,10 @@
   
 .text-content {
     padding-top: 10px;
+}
+.text-line {
+    display: flex;
+    align-items: center;
 }
   
 h1 {
