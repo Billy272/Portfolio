@@ -25,7 +25,7 @@ function Projects() {
         },
         {
             title: 'Project 3',
-            description: 'Second project created',
+            description: 'Third project created',
             image: 'proj3.jpg'
         }
     ];
