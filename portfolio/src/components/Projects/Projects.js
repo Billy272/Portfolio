@@ -4,7 +4,7 @@ import './Projects.css';
 function Project({title, description, image}){
     return (
         <div className='project'>
-            <img src={image} alt={title}/>
+            <img src={process.env.PUBLIC_URL + image} alt={title}/>
             <h3>{title}</h3>
             <p>{description}</p>
         </div>
@@ -14,19 +14,19 @@ function Project({title, description, image}){
 function Projects() {
     const projects = [
         {
-            title: 'Project 1',
-            description: 'First project created',
-            image: 'proj1.jpg'
+            title: 'Python Projects',
+            description: 'Projects created with mostly Python.',
+            image: '/python.png'
         },
         {
-            title: 'Project 2',
-            description: 'Second project created',
-            image: 'proj2.jpg'
+            title: 'React Projects',
+            description: 'Projects created mainly using React.js.',
+            image: '/React.webp'
         },
         {
-            title: 'Project 3',
-            description: 'Third project created',
-            image: 'proj3.jpg'
+            title: 'Java Projects',
+            description: 'Projects mainly created using Java.',
+            image: '/Java.webp'
         }
     ];
 
