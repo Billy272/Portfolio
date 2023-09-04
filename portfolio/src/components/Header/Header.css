@@ -31,7 +31,7 @@ ul.horizontal-nav {
 }
 ul.horizontal-nav li {
     display: inline;
-    margin-right: 80px;
+    margin-right: 50px;
 }
 ul.horizontal-nav li a {
     text-decoration: none;
