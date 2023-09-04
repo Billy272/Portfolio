@@ -34,15 +34,21 @@ ul.horizontal-nav {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 ul.horizontal-nav li {
     display: inline;
     margin-right: 20px;
+    margin-left: 20px;
 }
 ul.horizontal-nav li a {
     text-decoration: none;
     color:aqua;
     font-weight: bold;
+}
+ul.horizontal-nav li:first-child{
+    margin-left: 0;
 }
 ul.horizontal-nav li a:hover{
     color: fuchsia;
