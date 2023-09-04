@@ -1,15 +1,46 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Contact.css'
 
 function Contact() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Name:', name);
+        console.log('Email:', email)
+        console.log('Message:', message)
+    };
+
     return (
-        <div className="contact">
-            <h3>Contact Me</h3>
-            <p>
-                You can reach me for assistance,greetings or even job opportunity.
-            </p>
-            <a href="billcordias8@gmail.com">Send Email</a>
-        </div>
+        <section className="contact">
+            <h2>Contact Me.</h2>
+            <div className="contact-form">
+                <form onSubmit={handleSubmit}>
+                    <input 
+                    type="text"
+                    placeholder="Name"
+                    value={name}
+                    onChange = {(e) => setName(e.target.value)}
+                    required
+                    />
+                    <input 
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    />
+                    <input 
+                    placeholder="Message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    />
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
     )
 }
 export default Contact;
