@@ -9,6 +9,14 @@ function Header(props) {
                     <h1>{props.name}</h1>
                     <p>{props.profession}</p>
                 </div>
+                <div className='text-line'>
+                    <ul className='horizontal-nav'>
+                        <li><a href='./Header.js'>Home</a></li>
+                        <li><a href='../About'>About Me</a></li>
+                        <li><a href='../Projects'>Projects</a></li>
+                        <li><a href='../Contact'>Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
     )

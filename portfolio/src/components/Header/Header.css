@@ -24,4 +24,20 @@ p {
     font-size: 1.5rem;
     margin: 0;
 }
-  
+ul.horizontal-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.horizontal-nav li {
+    display: inline;
+    margin-right: 20px;
+}
+ul.horizontal-nav li a {
+    text-decoration: none;
+    color:aqua;
+    font-weight: bold;
+}
+ul.horizontal-nav li a:hover{
+    color: fuchsia;
+}
