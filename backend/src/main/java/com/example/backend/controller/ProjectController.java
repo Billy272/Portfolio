@@ -12,9 +12,9 @@ import java.util.List;
 public class ProjectController {
     public List<Project> getProjects() {
         List<Project> projects = new ArrayList<>();
-        projects.add(new Project("Project 1", "Description1"));
-        projects.add(new Project("Project 2", "Desc 2"));
-        projects.add(new Project("Project 3", "Desc 3"));
+        projects.add(new Project("Python Projects", "Projects created with mostly Python."));
+        projects.add(new Project("React Projects", "Projects created mainly using React.js."));
+        projects.add(new Project("Java Projects", "Projects mainly created using Java."));
         return projects;
     }
 
