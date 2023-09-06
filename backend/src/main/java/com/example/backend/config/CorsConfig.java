@@ -1,6 +1,5 @@
 package com.example.backend.config;
 
-import org.springframework.context.annotation.bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
