@@ -2,5 +2,10 @@
     "java.project.sourcePaths": [
         "portfolio_backend/src",
         "backend/src/main/java/com/example/backend"
-    ]
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.statusBar.visible": true,
+    "workbench.tree.indent": 12,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.view.alwaysShowHeaderActions": true
 }
