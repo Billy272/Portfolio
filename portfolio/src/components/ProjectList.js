@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import API_BASE_URL from "./config";
 
 function ProjectList() {
     const [projects, setProjects] = useState([]);
