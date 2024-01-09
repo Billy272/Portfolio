@@ -8,8 +8,8 @@ import Contact from '../Contact/Contact';
 function App() {
   return (
     <div className="App">
-      <Header name="Bill Bitok" profession="React Junior Developer" />
-      <Me />
+      <Header />
+      <Me name="Bill Bitok" profession="Junior Data Analyst and Front-end developer." />
       <About />
       <Projects />
       <Contact />

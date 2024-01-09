@@ -5,10 +5,6 @@ function Header(props) {
     return (
         <header  className="header">
             <div className="header-content">
-                <div className="text-content">
-                    <h1>{props.name}</h1>
-                    <p>{props.profession}</p>
-                </div>
                 <div className='text-line'>
                     <ul className='horizontal-nav'>
                         <li><a href='./Header.js'>Home</a></li>
