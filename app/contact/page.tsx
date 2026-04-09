@@ -1,0 +1,208 @@
+'use client';
+
+import { useState } from 'react';
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    try {
+      const response = await fetch('mailto:billbitok977@gmail.com?subject=' + encodeURIComponent(formData.subject) + '&body=' + encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`));
+      setSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (error) {
+      // In a real app, you'd handle the error properly
+      // For now, we'll just log it
+      console.error('Form submission error:', error);
+    }
+  };
+
+  return (
+    <div className="portfolio-shell">
+      <div className="bg-orb bg-orb-left" aria-hidden="true" />
+      <div className="bg-orb bg-orb-right" aria-hidden="true" />
+      <div className="portfolio-main">
+        <section className="content-section content-split section-reveal" style={{ paddingTop: "3rem" }}>
+          <div>
+            <h2 style={{ marginBottom: "1.5rem" }}>Let&apos;s Work Together</h2>
+            <p style={{ marginBottom: "2rem", lineHeight: "1.8", color: "var(--ink-soft)", fontSize: "1.05rem" }}>
+              Have a project in mind or want to discuss opportunities? I&apos;d love to hear from you. Whether you have a question or just want to say hi, feel free to reach out.
+            </p>
+
+            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+              <div>
+                <label htmlFor="name" style={{ display: "block", marginBottom: "0.5rem", fontWeight: "600", color: "var(--foreground)" }}>
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your name"
+                  style={{
+                    width: "100%",
+                    padding: "0.75rem",
+                    border: "1px solid var(--line)",
+                    borderRadius: "8px",
+                    fontSize: "1rem",
+                    fontFamily: "inherit",
+                  }}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" style={{ display: "block", marginBottom: "0.5rem", fontWeight: "600", color: "var(--foreground)" }}>
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="your@email.com"
+                  style={{
+                    width: "100%",
+                    padding: "0.75rem",
+                    border: "1px solid var(--line)",
+                    borderRadius: "8px",
+                    fontSize: "1rem",
+                    fontFamily: "inherit",
+                  }}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="subject" style={{ display: "block", marginBottom: "0.5rem", fontWeight: "600", color: "var(--foreground)" }}>
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  placeholder="What is this about?"
+                  style={{
+                    width: "100%",
+                    padding: "0.75rem",
+                    border: "1px solid var(--line)",
+                    borderRadius: "8px",
+                    fontSize: "1rem",
+                    fontFamily: "inherit",
+                  }}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" style={{ display: "block", marginBottom: "0.5rem", fontWeight: "600", color: "var(--foreground)" }}>
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  placeholder="Tell me more..."
+                  rows={6}
+                  style={{
+                    width: "100%",
+                    padding: "0.75rem",
+                    border: "1px solid var(--line)",
+                    borderRadius: "8px",
+                    fontSize: "1rem",
+                    fontFamily: "inherit",
+                    resize: "vertical",
+                  }}
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="btn-primary"
+                style={{ width: "fit-content", padding: "0.9rem 2rem" }}
+              >
+                Send Message
+              </button>
+
+              {submitted && (
+                <p style={{ color: "var(--primary-blue)", fontWeight: "500" }}>
+                  Thanks for your message! I&apos;ll get back to you soon.
+                </p>
+              )}
+            </form>
+          </div>
+
+          <div>
+            <img
+              src="/contact-hero.jpg"
+              alt="Contact"
+              className="hero-image"
+              style={{ minHeight: "400px" }}
+            />
+
+            <div style={{ marginTop: "2rem", padding: "2rem", backgroundColor: "var(--card-bg-alt)", borderRadius: "12px" }}>
+              <h3 style={{ marginBottom: "1.5rem" }}>Other Ways to Reach Me</h3>
+
+              <div style={{ marginBottom: "1.5rem" }}>
+                <h4 style={{ color: "var(--primary-blue)", marginBottom: "0.5rem" }}>Email</h4>
+                <a href="mailto:billbitok977@gmail.com" style={{ color: "var(--primary-blue)", textDecoration: "none", fontWeight: "500" }}>
+                  billbitok977@gmail.com
+                </a>
+              </div>
+
+              <div style={{ marginBottom: "1.5rem" }}>
+                <h4 style={{ color: "var(--primary-blue)", marginBottom: "0.5rem" }}>Phone</h4>
+                <a href="tel:+254727162986" style={{ color: "var(--primary-blue)", textDecoration: "none", fontWeight: "500" }}>
+                  +254 727 162 986
+                </a>
+              </div>
+
+              <div style={{ marginBottom: "1.5rem" }}>
+                <h4 style={{ color: "var(--primary-blue)", marginBottom: "0.5rem" }}>Location</h4>
+                <p style={{ margin: 0, color: "var(--foreground)" }}>Nairobi, Kenya</p>
+              </div>
+
+              <div>
+                <h4 style={{ color: "var(--primary-blue)", marginBottom: "0.5rem" }}>Social</h4>
+                <a
+                  href="https://github.com/Billy272"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "var(--primary-blue)", textDecoration: "none", fontWeight: "500", display: "block" }}
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
