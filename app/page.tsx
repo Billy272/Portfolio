@@ -15,42 +15,48 @@ export default function Home() {
         </section>
 
         <section className="hero-layout section-reveal" style={{ animationDelay: "80ms" }}>
-          <div className="hero-copy-block">
-            <p className="eyebrow">Full Stack Developer · DevOps Engineer · Systems Design</p>
-            <h1 className="hero-title">
-              Building premium digital experiences that are delightful to use and engineered to scale.
-            </h1>
-            <p className="hero-copy">
-              I'm Bill Bitok, a developer from Nairobi crafting thoughtful interfaces and reliable systems. I focus on building software that solves real problems with clarity and taste.
-            </p>
-            <div className="hero-actions">
-              <a href="mailto:billbitok977@gmail.com" className="btn-primary">
-                Get in Touch
-              </a>
-              <a
-                href="https://github.com/Billy272"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary"
-              >
-                See My Work
-              </a>
+          <div className="hero-content-wrapper">
+            <div className="hero-copy-block">
+              <p className="eyebrow">Full Stack Developer · DevOps Engineer · Systems Design</p>
+              <h1 className="hero-title">
+                Building premium digital experiences that are delightful to use and engineered to scale.
+              </h1>
+              <p className="hero-copy">
+                I'm Bill Bitok, a developer from Nairobi crafting thoughtful interfaces and reliable systems. I focus on building software that solves real problems with clarity and taste.
+              </p>
+              <div className="hero-actions">
+                <a href="mailto:billbitok977@gmail.com" className="btn-primary">
+                  Get in Touch
+                </a>
+                <a
+                  href="https://github.com/Billy272"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                >
+                  See My Work
+                </a>
+              </div>
             </div>
 
-            <div className="stats-row">
-              <article>
-                <strong>What I Build</strong>
-                <span>Scalable web apps, internal tools, CRMs, HRMs, and beautiful websites.</span>
-              </article>
-              <article>
-                <strong>Tech Stack</strong>
-                <span>React, Next.js, FastAPI, Java, Supabase, Docker, PostgreSQL.</span>
-              </article>
-              <article>
-                <strong>My Approach</strong>
-                <span>Design thinking, solid engineering, performance obsession.</span>
-              </article>
+            <div className="hero-visual-side">
+              <img src="/hero-visual.jpg" alt="Developer workspace" className="hero-image" />
             </div>
+          </div>
+
+          <div className="stats-row">
+            <article>
+              <strong>What I Build</strong>
+              <span>Scalable web apps, internal tools, CRMs, HRMs, and beautiful websites.</span>
+            </article>
+            <article>
+              <strong>Tech Stack</strong>
+              <span>React, Next.js, FastAPI, Java, Supabase, Docker, PostgreSQL.</span>
+            </article>
+            <article>
+              <strong>My Approach</strong>
+              <span>Design thinking, solid engineering, performance obsession.</span>
+            </article>
           </div>
         </section>
 
@@ -71,12 +77,17 @@ export default function Home() {
           </article>
         </section>
 
-        <section className="content-section section-reveal" style={{ animationDelay: "240ms" }}>
-          <div className="section-heading">
-            <h2 id="projects">Featured Work</h2>
-            <p>Recent projects showcasing full-stack development, from concept to production deployment.</p>
-          </div>
-          <div className="project-grid">
+        <section className="content-section projects-section section-reveal" style={{ animationDelay: "240ms" }}>
+          <div className="projects-wrapper">
+            <div className="projects-visual">
+              <img src="/projects-showcase.jpg" alt="Web application interfaces" className="projects-image" />
+            </div>
+            <div className="projects-content">
+              <div className="section-heading">
+                <h2 id="projects">Featured Work</h2>
+                <p>Recent projects showcasing full-stack development, from concept to production deployment.</p>
+              </div>
+              <div className="project-grid">
             <article className="project-card project-card-large">
               <div>
                 <p className="project-tag">Corporate Website</p>
@@ -114,15 +125,18 @@ export default function Home() {
               </a>
             </article>
           </div>
+            </div>
+          </div>
         </section>
 
-        <section className="content-section content-split section-reveal" id="experience" style={{ animationDelay: "320ms" }}>
-          <div>
-            <div className="section-heading">
-              <h2>Professional Experience</h2>
-              <p>Hands-on roles building real products for real users, from concept through deployment.</p>
-            </div>
-            <div className="timeline">
+        <section className="content-section experience-section section-reveal" id="experience" style={{ animationDelay: "320ms" }}>
+          <div className="experience-wrapper">
+            <div className="experience-content">
+              <div className="section-heading">
+                <h2>Professional Experience</h2>
+                <p>Hands-on roles building real products for real users, from concept through deployment.</p>
+              </div>
+              <div className="timeline">
               <article className="timeline-item">
                 <h3>Software Developer Intern · Jamii Telecommunications</h3>
                 <p className="meta">Jun 2025 - Sep 2025</p>
@@ -160,6 +174,11 @@ export default function Home() {
                   </li>
                 </ul>
               </article>
+            </div>
+            </div>
+
+            <div className="experience-visual">
+              <img src="/experience-visual.jpg" alt="Developer workspace" className="experience-image" />
             </div>
           </div>
 
