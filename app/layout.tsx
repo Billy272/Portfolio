@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Navigation />
         <main className="page-container flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
