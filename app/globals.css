@@ -549,6 +549,11 @@ a {
   min-height: 240px;
 }
 
+.project-card-feature {
+  background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-bg-alt) 100%);
+  min-height: 180px;
+}
+
 .project-card h3 {
   margin: 0 0 0.75rem;
   font-size: 1.15rem;

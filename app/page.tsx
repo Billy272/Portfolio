@@ -123,59 +123,81 @@ export default function Home() {
 
         {/* Featured Work Section */}
         <section className="content-section projects-section section-reveal" style={{ animationDelay: "240ms" }}>
-          <div className="projects-wrapper">
-            <div className="projects-visual">
-              <img src="/crm.png" alt="Web application interfaces" className="projects-image" />
-            </div>
-            <div className="projects-content">
-              <div className="section-heading">
-                <h2>Selected Work</h2>
-                <p>Showcasing production-ready applications from concept through deployment.</p>
-              </div>
-              <div className="project-grid">
-                <article className="project-card project-card-large">
-                  <div>
-                    <p className="project-tag">Corporate Website</p>
-                    <h3>Evergain Limited</h3>
-                    <p>
-                      Modern corporate website with clear value proposition, responsive design, and optimized for conversions. Built with Next.js and Tailwind.
-                    </p>
-                  </div>
-                  <a href="https://www.evergain.co.ke/" target="_blank" rel="noopener noreferrer">
-                    View Project →
-                  </a>
-                </article>
-                <article className="project-card">
-                  <div>
-                    <p className="project-tag">Enterprise CRM</p>
-                    <h3>Evergain CRM</h3>
-                    <p>
-                      Complete CRM solution featuring lead management, proposals, project tracking, invoicing and reporting. Built with React and FastAPI.
-                    </p>
-                  </div>
-                  <a href="https://crm.evergain.co.ke/" target="_blank" rel="noopener noreferrer">
-                    View Project →
-                  </a>
-                </article>
-                <article className="project-card">
-                  <div>
-                    <p className="project-tag">HR Platform</p>
-                    <h3>Human Resource Management</h3>
-                    <p>
-                      Comprehensive HRM suite with recruitment, payroll, attendance tracking, and performance management. Built with Next.js and PostgreSQL.
-                    </p>
-                  </div>
-                  <a href="https://hrm.evergain.co.ke/" target="_blank" rel="noopener noreferrer">
-                    View Project →
-                  </a>
-                </article>
-              </div>
+          <div className="section-heading mb-12">
+            <div>
+              <h2>Selected Work</h2>
+              <p>Showcasing production-ready applications from concept through deployment.</p>
             </div>
           </div>
 
-          <div style={{ textAlign: "center", marginTop: "2rem", paddingTop: "2rem", borderTop: "1px solid var(--line)" }}>
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            {/* Left - Featured Project with Screenshot */}
+            <div className="flex flex-col gap-6">
+              <div className="relative overflow-hidden rounded-3xl border-2 border-[var(--line)] bg-[var(--card-bg-alt)] shadow-lg h-[400px]">
+                <img 
+                  src="/crm.png" 
+                  alt="Evergain CRM Interface" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <article className="project-card project-card-large">
+                <div>
+                  <p className="project-tag">Enterprise CRM</p>
+                  <h3>Evergain CRM</h3>
+                  <p>
+                    Complete CRM solution featuring lead management, proposals, project tracking, invoicing and reporting. Built with React and FastAPI.
+                  </p>
+                </div>
+                <a href="https://crm.evergain.co.ke/" target="_blank" rel="noopener noreferrer">
+                  View Project →
+                </a>
+              </article>
+            </div>
+
+            {/* Right - Project Cards Grid */}
+            <div className="flex flex-col gap-6">
+              <article className="project-card project-card-feature">
+                <div>
+                  <p className="project-tag">Corporate Website</p>
+                  <h3>Evergain Limited</h3>
+                  <p>
+                    Modern corporate website with clear value proposition, responsive design, and optimized for conversions. Built with Next.js and Tailwind.
+                  </p>
+                </div>
+                <a href="https://www.evergain.co.ke/" target="_blank" rel="noopener noreferrer">
+                  View Project →
+                </a>
+              </article>
+              <article className="project-card project-card-feature">
+                <div>
+                  <p className="project-tag">HR Platform</p>
+                  <h3>Human Resource Management</h3>
+                  <p>
+                    Comprehensive HRM suite with recruitment, payroll, attendance tracking, and performance management. Built with Next.js and PostgreSQL.
+                  </p>
+                </div>
+                <a href="https://hrm.evergain.co.ke/" target="_blank" rel="noopener noreferrer">
+                  View Project →
+                </a>
+              </article>
+              <article className="project-card project-card-feature">
+                <div>
+                  <p className="project-tag">More Projects</p>
+                  <h3>And More...</h3>
+                  <p>
+                    Explore additional projects including custom solutions, integrations, and specialized applications built with modern technologies.
+                  </p>
+                </div>
+                <a href="/projects" className="font-semibold text-[var(--accent-primary)]">
+                  View All Work →
+                </a>
+              </article>
+            </div>
+          </div>
+
+          <div style={{ textAlign: "center", paddingTop: "2rem", borderTop: "1px solid var(--line)" }}>
             <Link href="/projects" className="btn-primary">
-              View All Projects
+              Explore Complete Portfolio
             </Link>
           </div>
         </section>
