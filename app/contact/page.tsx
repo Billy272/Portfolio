@@ -1,5 +1,6 @@
 'use client';
 
+import ProtectedImage from '@/components/ProtectedImage';
 import { useState } from 'react';
 
 export default function ContactPage() {
@@ -184,11 +185,11 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <img
-              src="/contact-hero.jpg"
+            <ProtectedImage
+              src="/contact.jpg"
               alt="Contact"
               className="hero-image"
-              style={{ minHeight: "400px" }}
+              minHeight="400px"
             />
 
             <div style={{ marginTop: "2rem", padding: "2rem", backgroundColor: "var(--card-bg-alt)", borderRadius: "12px" }}>

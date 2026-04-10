@@ -1,3 +1,5 @@
+import ProtectedImage from "@/components/ProtectedImage";
+
 export default function ExperiencePage() {
   return (
     <div className="portfolio-shell">
@@ -52,11 +54,10 @@ export default function ExperiencePage() {
           </div>
 
           <div>
-            <img
-              src="/experience-hero.jpg"
+            <ProtectedImage
+              src="/exp.jpg"
               alt="Professional experience"
               className="hero-image"
-              style={{ minHeight: "400px" }}
             />
 
             <div style={{ marginTop: "2rem", padding: "2rem", backgroundColor: "var(--card-bg-alt)", borderRadius: "12px" }}>

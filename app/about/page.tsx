@@ -1,3 +1,5 @@
+import ProtectedImage from "@/components/ProtectedImage";
+
 export default function AboutPage() {
   return (
     <div className="portfolio-shell">
@@ -43,11 +45,11 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <img
-              src="/about-hero.jpg"
+            <ProtectedImage
+              src="/Me.jpg"
               alt="About Bill Bitok"
-              className="hero-image"
-              style={{ minHeight: "400px" }}
+              className="hero-image no-save-image"
+              minHeight="400px"
             />
 
             <div style={{ marginTop: "2rem", padding: "2rem", backgroundColor: "var(--card-bg-alt)", borderRadius: "12px" }}>

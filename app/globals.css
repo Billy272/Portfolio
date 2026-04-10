@@ -35,6 +35,11 @@ a {
   color: inherit;
 }
 
+.no-save-image {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
 .portfolio-shell {
   position: relative;
   overflow: hidden;

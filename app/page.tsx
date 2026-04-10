@@ -1,3 +1,4 @@
+import ProtectedImage from "@/components/ProtectedImage";
 import Link from "next/link";
 
 export default function Home() {
@@ -34,7 +35,7 @@ export default function Home() {
               {/* Quick Stats */}
               <div className="mt-12 grid grid-cols-3 gap-6 border-t border-[var(--line)] pt-8">
                 <div>
-                  <p className="text-2xl font-bold text-[var(--foreground)]">5+</p>
+                  <p className="text-2xl font-bold text-[var(--foreground)]">4+</p>
                   <p className="text-xs uppercase tracking-[0.1em] text-[var(--ink-soft)]">Years Experience</p>
                 </div>
                 <div>
@@ -42,7 +43,7 @@ export default function Home() {
                   <p className="text-xs uppercase tracking-[0.1em] text-[var(--ink-soft)]">Projects Shipped</p>
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-[var(--foreground)]">100%</p>
+                  <p className="text-2xl font-bold text-[var(--foreground)]">92%</p>
                   <p className="text-xs uppercase tracking-[0.1em] text-[var(--ink-soft)]">Client Happy</p>
                 </div>
               </div>
@@ -50,6 +51,13 @@ export default function Home() {
 
             {/* Right Column - Visual Showcase */}
             <div className="group relative h-[500px] w-full overflow-hidden rounded-[28px] border-2 border-[var(--line)] bg-gradient-to-br from-[var(--card-bg)] to-[var(--card-bg-alt)] p-8 shadow-[0_20px_50px_rgba(26,26,26,0.15)] transition-transform duration-500 lg:h-[600px]">
+              {/* Blurred Image Background */}
+              <ProtectedImage 
+                src="/Me.jpg" 
+                alt="Background" 
+                className="absolute inset-0 w-full h-full object-cover  opacity-50 rounded-xl"
+              />
+
               {/* Background Elements */}
               <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-gradient-to-br from-[var(--accent-primary)]/10 to-transparent blur-3xl" />
@@ -72,12 +80,6 @@ export default function Home() {
 
                 {/* Center Feature */}
                 <div className="relative flex flex-col items-center justify-center gap-3 text-center h-32">
-                  {/* Blurred Image Background */}
-                  <img 
-                    src="/Me.jpg" 
-                    alt="Background" 
-                    className="absolute inset-0 w-full h-full object-cover blur-lg opacity-40 rounded-xl"
-                  />
                   {/* Content on top */}
                   <div className="relative z-10">
                     <div className="text-5xl font-bold text-[var(--foreground)] opacity-90 group-hover:opacity-100 transition-opacity">
