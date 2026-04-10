@@ -6,92 +6,113 @@ export default function Home() {
       <div className="bg-orb bg-orb-left" aria-hidden="true" />
       <div className="bg-orb bg-orb-right" aria-hidden="true" />
       <div className="portfolio-main">
-        <section className="section-reveal mb-16 flex flex-col gap-12" style={{ animationDelay: "80ms" }}>
-          <div className="grid items-stretch gap-8 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-12">
-            <div className="relative h-full overflow-hidden rounded-[24px] border border-[var(--line)] bg-[radial-gradient(115%_130%_at_0%_0%,rgba(0,81,255,0.08),transparent_55%),var(--card-bg)] p-8 shadow-[0_14px_34px_rgba(26,26,26,0.12)] sm:p-10 lg:p-12">
-              <p className="mb-6 inline-block rounded-full border border-[var(--line)] bg-[var(--card-bg-alt)] px-5 py-2 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--foreground)]">
-                Full Stack Developer · DevOps Engineer · Systems Design
+        {/* Hero Section */}
+        <section className="section-reveal mb-24 flex flex-col gap-16" style={{ animationDelay: "80ms" }}>
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            {/* Left Column - Content */}
+            <div className="flex flex-col justify-center">
+              <p className="mb-4 text-sm font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)]">
+                Full Stack Developer
               </p>
-              <h1 className="m-0 text-[clamp(2.2rem,5.4vw,4.8rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[var(--foreground)]">
-                Building premium digital experiences that are delightful to use and engineered to scale.
+              <h1 className="mb-6 text-[clamp(2.8rem,6vw,5rem)] font-bold leading-[1.1] tracking-[-0.03em] text-[var(--foreground)]">
+                Crafting <span className="italic text-[var(--accent-primary)]">interactive</span> experiences
               </h1>
-              <p className="my-6 max-w-[60ch] text-[1.04rem] leading-8 text-[var(--ink-soft)]">
-                I&apos;m Bill Bitok, a developer from Nairobi crafting thoughtful interfaces and reliable systems. I focus on building software that solves real problems with clarity and taste.
+              <p className="mb-8 max-w-[55ch] text-lg leading-relaxed text-[var(--ink-soft)]">
+                I&apos;m Bill Bitok, designing and building thoughtful digital products that engage users and scale reliably. From concept to production, every detail matters.
               </p>
-              <div className="mb-7 flex flex-wrap gap-2.5" aria-label="Core strengths">
-                <span className="rounded-full border border-[var(--line)] bg-[color-mix(in_srgb,var(--primary-blue)_8%,white)] px-3 py-1.5 text-xs font-semibold tracking-[0.02em] text-[var(--foreground)]">Interaction-ready UI</span>
-                <span className="rounded-full border border-[var(--line)] bg-[color-mix(in_srgb,var(--primary-blue)_8%,white)] px-3 py-1.5 text-xs font-semibold tracking-[0.02em] text-[var(--foreground)]">Scalable backend systems</span>
-                <span className="rounded-full border border-[var(--line)] bg-[color-mix(in_srgb,var(--primary-blue)_8%,white)] px-3 py-1.5 text-xs font-semibold tracking-[0.02em] text-[var(--foreground)]">Fast product delivery</span>
-              </div>
-              <div className="mb-5 flex flex-wrap gap-4 max-md:flex-col max-md:gap-3">
-                <Link href="/contact" className="btn-primary">
-                  Get in Touch
+              
+              {/* CTA Buttons */}
+              <div className="flex flex-wrap gap-3 max-md:flex-col">
+                <Link href="/projects" className="btn-primary">
+                  Explore My Work
                 </Link>
-                <Link href="/projects" className="btn-secondary">
-                  See My Work
+                <Link href="/contact" className="btn-secondary">
+                  Get in Touch →
                 </Link>
               </div>
 
-              <div className="mt-7 flex flex-wrap gap-4 border-t border-[var(--line)] pt-6">
+              {/* Quick Stats */}
+              <div className="mt-12 grid grid-cols-3 gap-6 border-t border-[var(--line)] pt-8">
                 <div>
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[var(--ink-soft)]">Current Focus</p>
-                  <p className="mt-1 text-sm font-medium text-[var(--foreground)]">Product-grade web experiences</p>
+                  <p className="text-2xl font-bold text-[var(--foreground)]">5+</p>
+                  <p className="text-xs uppercase tracking-[0.1em] text-[var(--ink-soft)]">Years Experience</p>
                 </div>
                 <div>
-                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[var(--ink-soft)]">Collaboration</p>
-                  <p className="mt-1 text-sm font-medium text-[var(--foreground)]">Freelance · Contract · Full-time</p>
+                  <p className="text-2xl font-bold text-[var(--foreground)]">20+</p>
+                  <p className="text-xs uppercase tracking-[0.1em] text-[var(--ink-soft)]">Projects Shipped</p>
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-[var(--foreground)]">100%</p>
+                  <p className="text-xs uppercase tracking-[0.1em] text-[var(--ink-soft)]">Client Happy</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex min-h-[340px] w-full items-center lg:min-h-[430px]">
-              <div className="relative h-full w-full overflow-hidden rounded-[26px] border border-[var(--line)] bg-[var(--card-bg-alt)] shadow-[0_16px_36px_rgba(26,26,26,0.16)]">
-                <img src="/Me.jpg" alt="Developer workspace" className="block h-full w-full object-cover" />
-                <article className="absolute right-4 top-4 max-w-[240px] rounded-[14px] border border-white/50 bg-[rgba(17,24,39,0.62)] px-4 py-3 text-white shadow-[0_10px_24px_rgba(0,0,0,0.22)] backdrop-blur-sm animate-[heroFloat_4.8s_ease-in-out_infinite]" aria-label="Work style">
-                  <p className="m-0 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-white/85">Workflow</p>
-                  <strong className="mt-1 block text-[0.84rem] leading-[1.35]">Design → Build → Deploy</strong>
-                </article>
-                <article className="absolute bottom-4 left-4 max-w-[240px] rounded-[14px] border border-white/50 bg-[rgba(17,24,39,0.62)] px-4 py-3 text-white shadow-[0_10px_24px_rgba(0,0,0,0.22)] backdrop-blur-sm animate-[heroFloat_4.8s_ease-in-out_infinite] [animation-delay:0.6s]" aria-label="Availability">
-                  <p className="m-0 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-white/85">Based in Nairobi</p>
-                  <strong className="mt-1 block text-[0.84rem] leading-[1.35]">Open to remote projects</strong>
-                </article>
+            {/* Right Column - Visual Showcase */}
+            <div className="group relative h-[500px] w-full overflow-hidden rounded-[28px] border-2 border-[var(--line)] bg-gradient-to-br from-[var(--card-bg)] to-[var(--card-bg-alt)] p-8 shadow-[0_20px_50px_rgba(26,26,26,0.15)] transition-transform duration-500 lg:h-[600px]">
+              {/* Background Elements */}
+              <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-gradient-to-br from-[var(--accent-primary)]/10 to-transparent blur-3xl" />
+                <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-gradient-to-tr from-[var(--accent-secondary)]/10 to-transparent blur-3xl" />
+              </div>
+
+              {/* Content Grid */}
+              <div className="relative z-10 h-full flex flex-col justify-between">
+                {/* Top Cards */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="rounded-2xl border border-[var(--line)] bg-white/80 backdrop-blur-sm p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                    <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent-primary)] mb-1">Design</p>
+                    <h3 className="text-sm font-bold text-[var(--foreground)]">User-Centered</h3>
+                  </div>
+                  <div className="rounded-2xl border border-[var(--line)] bg-white/80 backdrop-blur-sm p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                    <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent-primary)] mb-1">Build</p>
+                    <h3 className="text-sm font-bold text-[var(--foreground)]">Performance</h3>
+                  </div>
+                </div>
+
+                {/* Center Feature */}
+                <div className="text-center flex flex-col items-center gap-3">
+                  <div className="text-5xl font-bold text-[var(--foreground)] opacity-20 group-hover:opacity-30 transition-opacity">
+                    ◎
+                  </div>
+                  <p className="text-sm font-medium text-[var(--ink-soft)]">Interactive & Dynamic</p>
+                </div>
+
+                {/* Bottom Cards */}
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="rounded-2xl border border-[var(--line)] bg-white/80 backdrop-blur-sm p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                    <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent-primary)] mb-1">Tech</p>
+                    <h3 className="text-sm font-bold text-[var(--foreground)]">Modern Stack</h3>
+                  </div>
+                  <div className="rounded-2xl border border-[var(--line)] bg-white/80 backdrop-blur-sm p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer">
+                    <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent-primary)] mb-1">Deploy</p>
+                    <h3 className="text-sm font-bold text-[var(--foreground)]">Scalable</h3>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="stats-row">
-            <article>
-              <strong>What I Build</strong>
-              <span>Scalable web apps, internal tools, CRMs, HRMs, and beautiful websites.</span>
-            </article>
-            <article>
-              <strong>Tech Stack</strong>
-              <span>React, Next.js, FastAPI, Java, Supabase, Docker, PostgreSQL.</span>
-            </article>
-            <article>
-              <strong>My Approach</strong>
-              <span>Design thinking, solid engineering, performance obsession.</span>
-            </article>
           </div>
         </section>
 
+        {/* Feature Strip */}
         <section className="feature-strip section-reveal" style={{ animationDelay: "160ms" }}>
           <article className="feature-card feature-card-dark">
-            <p>About</p>
+            <p>Specialty</p>
             <h3>
-              I build interfaces that delight users and systems that scale. Clean code, thoughtful design, real impact.
+              Full-stack web applications with pixel-perfect interfaces and robust backend systems.
             </h3>
           </article>
           <article className="feature-card">
-            <p>Education</p>
-            <h3>BSc Mathematics & Computer Science, Multimedia University of Kenya.</h3>
+            <p>Approach</p>
+            <h3>Design thinking, solid engineering, meticulous attention to performance and user experience.</h3>
           </article>
           <article className="feature-card feature-card-blue">
-            <p>Philosophy</p>
-            <h3>Design-driven, engineer-led, user-obsessed. Every pixel matters.</h3>
+            <p>Location</p>
+            <h3>Based in Nairobi, open to remote and contract opportunities worldwide.</h3>
           </article>
         </section>
 
+        {/* Featured Work Section */}
         <section className="content-section projects-section section-reveal" style={{ animationDelay: "240ms" }}>
           <div className="projects-wrapper">
             <div className="projects-visual">
@@ -99,8 +120,8 @@ export default function Home() {
             </div>
             <div className="projects-content">
               <div className="section-heading">
-                <h2>Featured Work</h2>
-                <p>Recent projects showcasing full-stack development, from concept to production deployment.</p>
+                <h2>Selected Work</h2>
+                <p>Showcasing production-ready applications from concept through deployment.</p>
               </div>
               <div className="project-grid">
                 <article className="project-card project-card-large">
