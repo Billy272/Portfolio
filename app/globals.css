@@ -125,36 +125,14 @@ a {
   opacity: 0.6;
 }
 
-.hero-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  margin-bottom: 4rem;
-  align-items: stretch;
-}
-
-.hero-content-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-}
-
-.hero-visual-side {
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-}
-
 .hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 16px;
+  display: block;
 }
 
-.hero-copy-block,
-.hero-side-card,
 .feature-card,
 .project-card,
 .timeline-item,
@@ -164,53 +142,16 @@ a {
   box-shadow: 0 2px 8px rgba(26, 26, 26, 0.06);
 }
 
-.hero-copy-block {
-  border-radius: 20px;
-  padding: clamp(2rem, 4vw, 3rem);
-}
-
-.hero-visual {
-  display: grid;
-  grid-template-rows: 1fr 0.72fr;
-  gap: 0.85rem;
-}
-
-.eyebrow {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 0.5rem 1.2rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--foreground);
-  background: var(--card-bg-alt);
-  font-weight: 600;
-}
-
-.hero-title {
-  margin: 0;
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-  color: var(--foreground);
-  font-weight: 700;
-}
-
-.hero-copy {
-  margin: 1.5rem 0 2rem;
-  max-width: 60ch;
-  color: var(--ink-soft);
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
+@keyframes heroFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .btn-primary,
@@ -273,12 +214,6 @@ a {
   font-weight: 600;
 }
 
-.hero-side-card h2 {
-  margin: 0;
-  font-size: 1.6rem;
-  line-height: 1.2;
-}
-
 .visual-panel {
   border: 1px solid var(--line);
   background: var(--card-bg);
@@ -335,12 +270,6 @@ a {
 .mini-bar-chart span:nth-child(3) { height: 86%; }
 .mini-bar-chart span:nth-child(4) { height: 52%; }
 
-.hero-side-card p {
-  margin: 0;
-  color: var(--ink-soft);
-  line-height: 1.7;
-}
-
 .contact-list {
   display: grid;
   gap: 0.55rem;
@@ -358,15 +287,16 @@ a {
 
 .projects-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   gap: 3rem;
-  align-items: center;
+  align-items: stretch;
 }
 
 .projects-visual {
   width: 100%;
-  height: 100%;
+  height: auto;
   min-height: 400px;
+  display: flex;
   order: -1;
 }
 
@@ -375,6 +305,14 @@ a {
   height: 100%;
   object-fit: cover;
   border-radius: 16px;
+  display: block;
+}
+
+.projects-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
 }
 
 .experience-section {
@@ -449,6 +387,10 @@ a {
   background: var(--card-bg-alt);
   padding: 1.5rem;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
 }
 
 .stats-row article:hover {
@@ -552,6 +494,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
+  align-items: stretch;
 }
 
 .project-card {
@@ -564,6 +507,13 @@ a {
   overflow: hidden;
   transition: all 0.3s ease;
   position: relative;
+}
+
+.project-card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-height: 0;
 }
 
 .project-card:hover {
@@ -677,7 +627,6 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .hero-content-wrapper,
   .projects-wrapper,
   .experience-wrapper {
     grid-template-columns: 1fr;
@@ -686,6 +635,7 @@ a {
 
   .projects-visual {
     order: -1;
+    min-height: 340px;
   }
 
   .section-heading {
@@ -710,21 +660,15 @@ a {
     gap: 1.5rem;
   }
 
-  .hero-title {
-    font-size: clamp(1.8rem, 5vw, 3rem);
-  }
-
-  .hero-content-wrapper,
   .projects-wrapper,
   .experience-wrapper {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
-  .hero-visual-side,
   .projects-visual,
   .experience-visual {
-    min-height: 280px;
+    min-height: 260px;
   }
 
   .visual-panel-top,
@@ -733,11 +677,6 @@ a {
     display: grid;
     align-items: start;
     gap: 1rem;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    gap: 0.75rem;
   }
 
   .btn-primary,

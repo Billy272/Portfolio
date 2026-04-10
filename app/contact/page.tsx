@@ -11,6 +11,8 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -20,19 +22,35 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
+    setIsSubmitting(true);
+    setSubmitError('');
+
     try {
-      const response = await fetch('mailto:billbitok977@gmail.com?subject=' + encodeURIComponent(formData.subject) + '&body=' + encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const payload = await response.json().catch(() => null);
+        throw new Error(payload?.error ?? 'Unable to send your message right now.');
+      }
+
       setSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
-      
+
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
-      // In a real app, you'd handle the error properly
-      // For now, we'll just log it
+      setSubmitError(error instanceof Error ? error.message : 'Unable to send your message right now.');
       console.error('Form submission error:', error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -145,10 +163,17 @@ export default function ContactPage() {
               <button
                 type="submit"
                 className="btn-primary"
-                style={{ width: "fit-content", padding: "0.9rem 2rem" }}
+                style={{ width: "fit-content", padding: "0.9rem 2rem", opacity: isSubmitting ? 0.8 : 1 }}
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
+
+              {submitError && (
+                <p style={{ color: '#b42318', fontWeight: '500' }}>
+                  {submitError}
+                </p>
+              )}
 
               {submitted && (
                 <p style={{ color: "var(--primary-blue)", fontWeight: "500" }}>
