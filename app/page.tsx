@@ -182,14 +182,14 @@ export default function Home() {
               </article>
               <article className="project-card project-card-feature">
                 <div>
-                  <p className="project-tag">More Projects</p>
-                  <h3>And More...</h3>
+                  <p className="project-tag">Microservices Architecture</p>
+                  <h3>Tulia Backend</h3>
                   <p>
-                    Explore additional projects including custom solutions, integrations, and specialized applications built with modern technologies.
+                    Production-grade microservices with Spring Boot, Kafka, Redis, and PostgreSQL deployed on Kubernetes with automated CI/CD using Jenkins and ArgoCD.
                   </p>
                 </div>
-                <a href="/projects" className="font-semibold text-[var(--accent-primary)]">
-                  View All Work →
+                <a href="https://github.com/Billy272/Tulia-Backend" target="_blank" rel="noopener noreferrer">
+                  View Project →
                 </a>
               </article>
             </div>
