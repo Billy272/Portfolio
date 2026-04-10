@@ -13,7 +13,7 @@ export default function Home() {
             {/* Left Column - Content */}
             <div className="flex flex-col justify-center">
               <p className="mb-4 text-sm font-semibold uppercase tracking-[0.12em] text-[var(--accent-primary)]">
-                Full Stack Developer
+                Full-Stack Developer | DevOps Enthusiast
               </p>
               <h1 className="mb-6 text-[clamp(2.8rem,6vw,5rem)] font-bold leading-[1.1] tracking-[-0.03em] text-[var(--foreground)]">
                 Crafting <span className="italic text-[var(--accent-primary)]">interactive</span> experiences
