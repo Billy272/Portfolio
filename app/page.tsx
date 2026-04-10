@@ -71,11 +71,20 @@ export default function Home() {
                 </div>
 
                 {/* Center Feature */}
-                <div className="text-center flex flex-col items-center gap-3">
-                  <div className="text-5xl font-bold text-[var(--foreground)] opacity-20 group-hover:opacity-30 transition-opacity">
-                    ◎
+                <div className="relative flex flex-col items-center justify-center gap-3 text-center h-32">
+                  {/* Blurred Image Background */}
+                  <img 
+                    src="/Me.jpg" 
+                    alt="Background" 
+                    className="absolute inset-0 w-full h-full object-cover blur-lg opacity-40 rounded-xl"
+                  />
+                  {/* Content on top */}
+                  <div className="relative z-10">
+                    <div className="text-5xl font-bold text-[var(--foreground)] opacity-90 group-hover:opacity-100 transition-opacity">
+                      ◎
+                    </div>
+                    <p className="text-sm font-medium text-[var(--foreground)] font-semibold mt-2">Interactive & Dynamic</p>
                   </div>
-                  <p className="text-sm font-medium text-[var(--ink-soft)]">Interactive & Dynamic</p>
                 </div>
 
                 {/* Bottom Cards */}
