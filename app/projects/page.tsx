@@ -29,6 +29,15 @@ export default function ProjectsPage() {
       link: "https://hrm.evergain.co.ke/",
       color: "bg-blue-50",
     },
+    {
+      title: "Tulia Backend",
+      tag: "Microservices Architecture",
+      description:
+        "Production-grade microservices backend with Spring Boot services deployed on Kubernetes. Features event-driven architecture with Kafka for inter-service communication, Redis for caching, and PostgreSQL for persistent data. Implements automated CI/CD pipeline with Jenkins and ArgoCD for continuous deployment with zero-downtime updates.",
+      tech: ["Java", "Spring Boot", "PostgreSQL", "Kafka", "Redis", "Kubernetes", "Docker", "Jenkins", "ArgoCD", "GitHub"],
+      link: "https://github.com/Billy272/Tulia-Backend",
+      color: "bg-slate-50",
+    },
   ];
 
   return (
