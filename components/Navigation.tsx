@@ -2,9 +2,15 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function Navigation() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   const isActive = (path: string) => pathname === path;
 
@@ -14,7 +20,22 @@ export default function Navigation() {
         <Link href="/" className="nav-logo">
           BB
         </Link>
-        <ul className="nav-links">
+        <button
+          type="button"
+          className={`nav-toggle ${isMenuOpen ? 'open' : ''}`}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setIsMenuOpen((prev) => !prev)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+        <ul
+          id="primary-navigation"
+          className={`nav-links ${isMenuOpen ? 'mobile-open' : ''}`}
+        >
           <li>
             <Link 
               href="/" 
