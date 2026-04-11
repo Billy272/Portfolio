@@ -9,7 +9,10 @@ export default function ContactPage() {
     email: '',
     subject: '',
     message: '',
+    website: '',
   });
+
+  const [formStartedAt] = useState(() => Date.now());
 
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -35,7 +38,10 @@ export default function ContactPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          formStartedAt,
+        }),
       });
 
       if (!response.ok) {
@@ -44,7 +50,7 @@ export default function ContactPage() {
       }
 
       setSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({ name: '', email: '', subject: '', message: '', website: '' });
 
       setTimeout(() => setSubmitted(false), 5000);
     } catch (error) {
@@ -133,6 +139,41 @@ export default function ContactPage() {
                     borderRadius: "8px",
                     fontSize: "1rem",
                     fontFamily: "inherit",
+                  }}
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="website"
+                  style={{
+                    position: 'absolute',
+                    width: '1px',
+                    height: '1px',
+                    padding: 0,
+                    margin: '-1px',
+                    overflow: 'hidden',
+                    clip: 'rect(0, 0, 0, 0)',
+                    border: 0,
+                  }}
+                >
+                  Website
+                </label>
+                <input
+                  type="text"
+                  id="website"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleChange}
+                  autoComplete="off"
+                  tabIndex={-1}
+                  style={{
+                    position: 'absolute',
+                    left: '-9999px',
+                    width: '1px',
+                    height: '1px',
+                    opacity: 0,
+                    pointerEvents: 'none',
                   }}
                 />
               </div>
