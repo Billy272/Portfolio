@@ -219,7 +219,7 @@ export default function ContactPage() {
 
               {submitted && (
                 <p style={{ color: "var(--primary-blue)", fontWeight: "500" }}>
-                  Thanks for your message! I&apos;ll get back to you soon.
+                  Thanks for your message! I&apos;ll get back to you soon on email.
                 </p>
               )}
             </form>
