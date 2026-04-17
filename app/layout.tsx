@@ -17,9 +17,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bill Cordias Bitok | Full Stack Developer",
+  title: "Bill Bitok | Full Stack Developer",
   description:
-    "Portfolio of Bill Cordias Bitok - Full Stack Developer, DevOps Engineer, and Systems Design Enthusiast.",
+    "Portfolio of Bill Bitok - Full Stack Developer, DevOps Engineer, and Systems Design Enthusiast.",
   manifest: "/site.webmanifest",
   icons: {
     icon: [
