@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -18,7 +19,14 @@ export default function Navigation() {
     <nav className="nav-bar">
       <div className="nav-container">
         <Link href="/" className="nav-logo">
-          BB
+          <Image
+            src="/logo.png"
+            alt="Bill Bitok logo"
+            width={40}
+            height={40}
+            priority
+            className="h-14 w-14 rounded-full object-contain"
+          />
         </Link>
         <button
           type="button"

@@ -7,7 +7,7 @@ export default function ProjectsPage() {
       tag: "Corporate Website",
       description:
         "Modern corporate website with clear value proposition, responsive design, and optimized for conversions. Features a beautiful landing page showcasing services, team, and portfolio.",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+      tech: ["Next.js", "Supabase", "Radix UI", "", "Vercel"],
       link: "https://www.evergain.co.ke/",
       color: "bg-blue-50",
     },
