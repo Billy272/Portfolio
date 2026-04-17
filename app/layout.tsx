@@ -30,12 +30,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${spaceGrotesk.variable} ${ibmPlexMono.variable} h-full antialiased`}
     >
       <head>
         <meta name="google-site-verification" content="4_U84p46uHY2HjbLnc1Bby-vGFcvjI9LT52ZNXoNeZ8" />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body suppressHydrationWarning className="min-h-full flex flex-col">
         <Navigation />
         <main className="page-container flex-1">{children}</main>
         <Footer />

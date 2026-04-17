@@ -265,6 +265,14 @@ export default function ContactPage() {
                 >
                   GitHub
                 </a>
+                <a
+                  href="https://www.linkedin.com/in/bill-bitok"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "var(--primary-blue)", textDecoration: "none", fontWeight: "500", display: "block", marginTop: "0.5rem" }}
+                >
+                  LinkedIn
+                </a>
               </div>
             </div>
           </div>

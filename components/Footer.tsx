@@ -16,6 +16,9 @@ export default function Footer() {
           <a href="https://github.com/Billy272" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
+          <a href="https://www.linkedin.com/in/bill-bitok" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
           <a href="tel:+254727162986">+254 727 162 986</a>
         </div>
         <div className="footer-section">
