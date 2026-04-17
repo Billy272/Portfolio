@@ -89,9 +89,9 @@ export default function AboutPage() {
             <div style={{ padding: "1.5rem", backgroundColor: "var(--card-bg-alt)", borderRadius: "12px" }}>
               <h3 style={{ marginBottom: "1rem", color: "var(--primary-blue)" }}>Backend</h3>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "0.95rem", color: "var(--ink-soft)", lineHeight: "1.8" }}>
-                <li>FastAPI & Python</li>
                 <li>Java Spring Boot</li>
                 <li>RESTful APIs</li>
+                <li>FastAPI & Python</li>
                 <li>Database Design</li>
                 <li>Authentication & Security</li>
               </ul>

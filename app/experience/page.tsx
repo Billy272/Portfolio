@@ -98,9 +98,9 @@ export default function ExperiencePage() {
             <div style={{ padding: "2rem", backgroundColor: "var(--card-bg-alt)", borderRadius: "12px" }}>
               <h3 style={{ marginBottom: "1.5rem", color: "var(--primary-blue)", fontSize: "1.1rem" }}>Backend Development</h3>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "0.95rem", color: "var(--ink-soft)", lineHeight: "2" }}>
-                <li>FastAPI (Python)</li>
                 <li>Java Spring Boot</li>
                 <li>RESTful APIs & tRPC</li>
+                <li>FastAPI (Python)</li>
                 <li>Database Design</li>
                 <li>Prisma & Drizzle ORM</li>
                 <li>Authentication & Security</li>
@@ -125,7 +125,8 @@ export default function ExperiencePage() {
                 <li>Docker & Containerization</li>
                 <li>Kubernetes</li>
                 <li>CI/CD Pipelines</li>
-                <li>Nginx & Web Servers</li>
+                <li>Git & Version Control</li>
+                <li>Nginx, Apache & Web Servers</li>
                 <li>Linux Administration</li>
                 <li>Cloud Deployment</li>
               </ul>
@@ -135,10 +136,11 @@ export default function ExperiencePage() {
               <h3 style={{ marginBottom: "1.5rem", color: "var(--primary-blue)", fontSize: "1.1rem" }}>Authentication & Security</h3>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "0.95rem", color: "var(--ink-soft)", lineHeight: "2" }}>
                 <li>Keycloak</li>
+                <li>Supabase Auth</li>
                 <li>OAuth 2.0</li>
                 <li>JWT & Session Management</li>
+                <li>Role-Based Access Control</li>
                 <li>Password Hashing (bcrypt)</li>
-                <li>Supabase Auth</li>
                 <li>Security Best Practices</li>
               </ul>
             </div>
@@ -152,6 +154,7 @@ export default function ExperiencePage() {
                 <li>Visualization (Seaborn, Matplotlib)</li>
                 <li>SciPy</li>
                 <li>Data Interpretation</li>
+                <li>Statistical Inference</li>
               </ul>
             </div>
           </div>

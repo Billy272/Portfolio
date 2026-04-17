@@ -7,7 +7,7 @@ export default function ProjectsPage() {
       tag: "Corporate Website",
       description:
         "Modern corporate website with clear value proposition, responsive design, and optimized for conversions. Features a beautiful landing page showcasing services, team, and portfolio.",
-      tech: ["Next.js", "Supabase", "Radix UI", "", "Vercel"],
+      tech: ["Next.js", "TypeScript", "Supabase(PostgreSQL)", "Radix UI", "Tailwind CSS", "Vercel"],
       link: "https://www.evergain.co.ke/",
       color: "bg-blue-50",
     },
@@ -16,7 +16,7 @@ export default function ProjectsPage() {
       tag: "Enterprise CRM",
       description:
         "Complete CRM solution featuring lead management, proposals, project tracking, invoicing and reporting. Built with React frontend and FastAPI backend for enterprise scalability.",
-      tech: ["React", "FastAPI", "PostgreSQL", "Redux", "Tailwind CSS"],
+      tech: ["Next.js", "TypeScript", "Supabase(PostgreSQL)", "Tailwind CSS", "Recharts", "Supabase Auth", "Vercel"],
       link: "https://crm.evergain.co.ke/",
       color: "bg-slate-50",
     },
@@ -25,7 +25,7 @@ export default function ProjectsPage() {
       tag: "HR Platform",
       description:
         "Comprehensive HRM suite with recruitment, payroll, attendance tracking, and performance management. Built with Next.js and PostgreSQL for real-time data synchronization.",
-      tech: ["Next.js", "PostgreSQL", "TypeScript", "Docker", "JWT Auth"],
+      tech: ["Next.js", "Supabase(PostgreSQL)", "TypeScript", "Supabase Auth"],
       link: "https://hrm.evergain.co.ke/",
       color: "bg-blue-50",
     },
