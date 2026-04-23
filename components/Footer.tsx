@@ -19,7 +19,7 @@ export default function Footer() {
           <a href="https://www.linkedin.com/in/bill-bitok" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a href="tel:+254727162986">+254 727 162 986</a>
+          <a href="tel:+254747162986">+254 747 162 986</a>
         </div>
         <div className="footer-section">
           <h3>Contact</h3>
