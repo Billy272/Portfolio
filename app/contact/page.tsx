@@ -246,7 +246,7 @@ export default function ContactPage() {
               <div style={{ marginBottom: "1.5rem" }}>
                 <h4 style={{ color: "var(--primary-blue)", marginBottom: "0.5rem" }}>Phone</h4>
                 <a href="tel:+254727162986" style={{ color: "var(--primary-blue)", textDecoration: "none", fontWeight: "500" }}>
-                  +254 727 162 986
+                  +254 747 162 986
                 </a>
               </div>
 
